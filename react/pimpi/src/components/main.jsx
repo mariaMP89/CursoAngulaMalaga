@@ -6,7 +6,13 @@ class Main extends Component {
         this.state = {
             conceptos: [
                 { nombre: 'luz', cantidad: -25 },
-                { nombre: 'quiniela', cantidad: 45 }
+                { nombre: 'agua', cantidad: -125 },
+                { nombre: 'quiniela', cantidad: 645 },
+                { nombre: 'peluqueroSA', cantidad: -70 },
+                { nombre: 'zara', cantidad: -13 },
+                { nombre: 'salario', cantidad: 1735 },
+                
+                
             ],
             form:[
                 {nombre:'', cantidad:0}
@@ -79,8 +85,8 @@ class Main extends Component {
                  <h2>Buscador</h2>
                     <input name= "buscador" type="text" 
                     onChange={this.searchConcepto} value={this.state.filtro}
-                    placeholder="Ingrese el concepto ... "/>
-                <br/>
+                    placeholder="Busqueda del concepto ... "/>
+                <p>....................................................................................</p>
                 <br/>
                 <table>
                     <thead>
@@ -93,13 +99,14 @@ class Main extends Component {
                     <tbody>
                         {filas}
                     </tbody>
-                    <br/>
                 </table>
-                <p>Total:{total}</p>
+                <p>---------------------------------------------------------------</p>
+                <h2>Total:    {total}</h2>
+                <p>....................................................................................</p>
                  <h2>Nuevo concepto</h2>
                     <input name= "concepto" type="text" 
                      onChange={this.onHandleChange} value={this.state.form.concepto} 
-                     placeholder="Ingrese aquí el concepto"/>
+                     placeholder="Ingrese el nuevo concepto"/>
                 <br/>
                  <h2>Nueva Cantidad</h2>
                     <input name= "cantidad" type="number" 
