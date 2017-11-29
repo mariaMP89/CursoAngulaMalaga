@@ -1,0 +1,19 @@
+<h1>Directivas</h1>
+<h2>Directivas de atributo</h2>
+<p [appMarcado]="'pink'">Un texto marcado</p>
+<p [appMarcado]="'violet'">Un texto marcado</p>
+<p [appMarcado]="'purple'">Un texto marcado</p>
+
+<h2>Directivas estructurales</h2>
+<ul>
+  <li *ngFor="let num of numeros, let pos = index">Posición:  {{pos}} Numero:  {{ num}}</li>
+</ul>
+<p *ngIf="mostrar">Se muestra</p>
+<input type="text" #m (input)="0">
+
+<div [ngSwitch]="m.value">
+  <p *ngSwitchCase="'perro'">Tengo un perro</p>
+  <p *ngSwitchCase="'gato'">Tengo un gato</p>
+  <p *ngSwitchCase="'canario'">Tengo un canario</p>
+  <p *ngSwitchDefault>No tengo ninguno de los anteriores</p>
+</div>

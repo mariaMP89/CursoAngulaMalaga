@@ -1,0 +1,27 @@
+<h1>Pipes</h1>
+<p>{{texto}}</p>
+
+<p>{{texto | uppercase}}</p> <!--pone el texto en mayusculas -->
+<p>{{texto | slice:3}}</p> <!--elimina el numero de letras que le indiquess -->
+<p>{{texto | slice:3:5}}</p> <!--elimina el numero de letras que le indiquess desde la letra 5 -->
+<p>{{texto | slice:3:5 | uppercase}}</p> <!--pone en mayus,elimina el numero de letras que le indiquess desde la letra 5 -->
+ <p>{{texto | oculto:['Feliz']}}</p>
+
+<p>{{fecha}}</p>
+<p>{{fecha | date}}</p>
+<p>{{fecha | date:"dd/MM/yyyy"}}</p>
+
+<p>{{num}}</p>
+<p>{{num | currency:'EUR'}}</p>
+<p>{{num | number:'2.3'}}</p>
+<p>{{num | doble}}</p> 
+<p>{{num | doble:5}}</p> 
+
+ <p>{{texto | reverse}}</p>
+ <input type="text"  #palabra (input)="0">
+<ul>
+  <li *ngFor="let mascota of mascotas | filtro:palabra.value">{{mascota}}</li>
+</ul>
+
+<input type="text" #input>
+<button type="button" (click)="addMascota(input.value)">Añadir</button>

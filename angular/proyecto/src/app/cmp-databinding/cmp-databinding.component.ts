@@ -11,14 +11,19 @@ export class CmpDatabindingComponent implements OnInit {
 
   @Input() num=5;
 
-  @Output() miEvento = new EventEmitter<string>();
+  @Output('clicado') miEvento = new EventEmitter<string>();
+  usuario={
+    nombre:'Pepita',
+    apellido:'Pulgarcita'
+  };
   constructor() { }
   
   ngOnInit() {
   }
   
   cambiarActivo(){
+    this.usuario.nombre += '-';
     this.activo = !this.activo;
-    this.miEvento.emit(this.activo?'activo':'inactivo');
+    this.miEvento.emit(!this.activo?'activo':'inactivo');
   }
 }
